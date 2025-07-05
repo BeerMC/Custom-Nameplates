@@ -263,9 +263,7 @@ public class BukkitCustomNameplates extends CustomNameplates implements Listener
         if (imageManager != null) this.imageManager.disable();
         if (chatManager != null) this.chatManager.disable();
         if (commandManager != null) {
-            if (!Bukkit.getServer().isStopping()) {
-                this.commandManager.unregisterFeatures();
-            }
+            this.commandManager.unregisterFeatures();
         }
         this.joinQuitListeners.clear();
         this.playerListeners.clear();
